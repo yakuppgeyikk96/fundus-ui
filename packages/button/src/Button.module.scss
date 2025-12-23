@@ -1,0 +1,100 @@
+.button {
+  font-family: $fundus-font-family;
+  font-size: $fundus-font-size-base;
+  font-weight: $fundus-font-weight-medium;
+  line-height: $fundus-line-height-normal;
+
+  border: none;
+  border-radius: $fundus-radius-md;
+  cursor: pointer;
+  transition: all $fundus-transition-base ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Variants
+  &.primary {
+    background-color: $fundus-primary;
+    color: $fundus-white;
+
+    &:hover:not(:disabled) {
+      background-color: $fundus-primary-hover;
+    }
+
+    &:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+  }
+
+  &.secondary {
+    background-color: $fundus-secondary;
+    color: $fundus-white;
+
+    &:hover:not(:disabled) {
+      background-color: $fundus-secondary-hover;
+    }
+  }
+
+  &.success {
+    background-color: $fundus-success;
+    color: $fundus-white;
+
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+  }
+
+  &.danger {
+    background-color: $fundus-danger;
+    color: $fundus-white;
+
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+  }
+
+  &.warning {
+    background-color: $fundus-warning;
+    color: $fundus-black;
+
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+  }
+
+  &.info {
+    background-color: $fundus-info;
+    color: $fundus-white;
+
+    &:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+  }
+
+  // Sizes
+  &.sm {
+    padding: $fundus-spacing-xs $fundus-spacing-sm;
+    font-size: $fundus-font-size-sm;
+  }
+
+  &.md {
+    padding: $fundus-spacing-sm $fundus-spacing-md;
+    font-size: $fundus-font-size-base;
+  }
+
+  &.lg {
+    padding: $fundus-spacing-md $fundus-spacing-lg;
+    font-size: $fundus-font-size-lg;
+  }
+
+  // Full width
+  &.fullWidth {
+    width: 100%;
+  }
+}
