@@ -1,0 +1,32 @@
+{
+  "name": "@fundus-ui/tokens",
+  "version": "1.0.0",
+  "description": "Design tokens for Fundus UI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./scss": "./dist/tokens.scss",
+    "./css": "./dist/tokens.css"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@fundus-ui/typescript-config": "workspace:*",
+    "typescript": "5.9.2",
+    "vite": "^5.0.0",
+    "sass": "^1.70.0",
+    "vite-plugin-dts": "^3.6.4"
+  }
+}
